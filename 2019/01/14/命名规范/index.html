@@ -7,17 +7,17 @@
   
   <title>命名规范 | SogouAI云 Web前端规范</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="组件命名 组件名采用kebab-case (短横线分隔命名) 全局组件用 base-名称， 局部组件用 页面-名称 引入组件采用PascalCase (单词首字母大写命名)  method方法命名 动宾短语（good：jumpPage、openCarInfoDialog）（bad：go、nextPage、show、open、login） ajax 方法以 get、post 开头，以 data 结尾">
+  <meta name="description" content="组件命名 组件名采用kebab-case (短横线分隔命名，包括页面组件，公共组件和逻辑组件) 全局组件用 base-名称， 局部组件用 页面-名称 引入组件采用PascalCase (单词首字母大写命名)  method方法命名 动宾短语（good：jumpPage、openCarInfoDialog）（bad：go、nextPage、show、open、login） ajax 方法以 get、">
 <meta property="og:type" content="article">
 <meta property="og:title" content="命名规范">
 <meta property="og:url" content="https://demonsprite.github.io/web-standard/2019/01/14/命名规范/index.html">
 <meta property="og:site_name" content="SogouAI云 Web前端规范">
-<meta property="og:description" content="组件命名 组件名采用kebab-case (短横线分隔命名) 全局组件用 base-名称， 局部组件用 页面-名称 引入组件采用PascalCase (单词首字母大写命名)  method方法命名 动宾短语（good：jumpPage、openCarInfoDialog）（bad：go、nextPage、show、open、login） ajax 方法以 get、post 开头，以 data 结尾">
+<meta property="og:description" content="组件命名 组件名采用kebab-case (短横线分隔命名，包括页面组件，公共组件和逻辑组件) 全局组件用 base-名称， 局部组件用 页面-名称 引入组件采用PascalCase (单词首字母大写命名)  method方法命名 动宾短语（good：jumpPage、openCarInfoDialog）（bad：go、nextPage、show、open、login） ajax 方法以 get、">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-14T06:29:37.868Z">
+<meta property="og:updated_time" content="2019-01-14T09:53:11.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="命名规范">
-<meta name="twitter:description" content="组件命名 组件名采用kebab-case (短横线分隔命名) 全局组件用 base-名称， 局部组件用 页面-名称 引入组件采用PascalCase (单词首字母大写命名)  method方法命名 动宾短语（good：jumpPage、openCarInfoDialog）（bad：go、nextPage、show、open、login） ajax 方法以 get、post 开头，以 data 结尾">
+<meta name="twitter:description" content="组件命名 组件名采用kebab-case (短横线分隔命名，包括页面组件，公共组件和逻辑组件) 全局组件用 base-名称， 局部组件用 页面-名称 引入组件采用PascalCase (单词首字母大写命名)  method方法命名 动宾短语（good：jumpPage、openCarInfoDialog）（bad：go、nextPage、show、open、login） ajax 方法以 get、">
   
     <link rel="alternate" href="/web-standard/atom.xml" title="SogouAI云 Web前端规范" type="application/atom+xml">
   
@@ -87,7 +87,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="组件命名"><a href="#组件命名" class="headerlink" title="组件命名"></a>组件命名</h2><ul>
-<li>组件名采用kebab-case (短横线分隔命名)</li>
+<li>组件名采用kebab-case (短横线分隔命名，包括页面组件，公共组件和逻辑组件)</li>
 <li>全局组件用 base-名称， 局部组件用 页面-名称</li>
 <li>引入组件采用PascalCase (单词首字母大写命名)</li>
 </ul>
@@ -95,9 +95,18 @@
 <li>动宾短语（good：jumpPage、openCarInfoDialog）（bad：go、nextPage、show、open、login）</li>
 <li>ajax 方法以 get、post 开头，以 data 结尾（good：getListData、postFormData）（bad：takeData、confirmData、getList、postForm）</li>
 <li>事件方法以 on 开头（onTypeChange、onUsernameInput）</li>
-<li>init、refresh 单词除外</li>
 <li>尽量使用常用单词开头（set、get、open、close、jump）</li>
 <li>驼峰命名（good: getListData）（bad: get_list_data、getlistData）</li>
+</ul>
+<h2 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h2><ul>
+<li>标准变量采用驼峰式命名规则</li>
+<li>‘ID’ 在变量名中全大写</li>
+<li>‘URL’ 在变量名中全大写</li>
+<li>‘Android’ 在变量名中大写第一个字母</li>
+<li>‘iOS’ 在变量名中小写第一个，大写后两个字母</li>
+<li>常量全大写，用下划线连接 (const MY_NAME = ‘hello’)</li>
+<li>构造函数，大写第一个字母</li>
+<li>jQuery/Zepto 对象必须以 ‘$’ 开头命名</li>
 </ul>
 <h2 id="命名可遵循以下规则："><a href="#命名可遵循以下规则：" class="headerlink" title="命名可遵循以下规则："></a>命名可遵循以下规则：</h2><ul>
 <li>有意义的名词、简短、具有可读性</li>
