@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>SogouAI云 Web前端规范</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="SogouAI云 Web前端规范">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="SogouAI云 Web前端规范">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SogouAI云 Web前端规范">
+  
+    <link rel="alternate" href="/atom.xml" title="SogouAI云 Web前端规范" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">SogouAI云 Web前端规范</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-结构化规范" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/14/结构化规范/" class="article-date">
+  <time datetime="2019-01-14T06:16:32.000Z" itemprop="datePublished">2019-01-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/14/结构化规范/">结构化规范</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="基于Vue-cli脚手架的结构基础划分"><a href="#基于Vue-cli脚手架的结构基础划分" class="headerlink" title="基于Vue-cli脚手架的结构基础划分"></a>基于Vue-cli脚手架的结构基础划分</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">├── index.html                      入口页面</span><br><span class="line"> ├── build                           构建脚本目录</span><br><span class="line"> │   ├── build-server.js                 运行本地构建服务器，可以访问构后的页面</span><br><span class="line"> │   ├── build.js                        生产环境构建脚本</span><br><span class="line"> │   ├── dev-client.js                   开发服务器热重载脚本，主要用来实现开发阶段的页面自动刷新</span><br><span class="line"> │   ├── dev-server.js                   运行本地开发服务器</span><br><span class="line"> │   ├── utils.js                        构建相关工具方法</span><br><span class="line"> │   ├── webpack.base.conf.js            wabpack基础配置</span><br><span class="line"> │   ├── webpack.dev.conf.js             wabpack开发环境配置</span><br><span class="line"> │   └── webpack.prod.conf.js            wabpack生产环境配置</span><br><span class="line"> ├── config                          项目配置</span><br><span class="line"> │   ├── dev.env.js                      开发环境变量</span><br><span class="line"> │   ├── index.js                        项目配置文件</span><br><span class="line"> │   ├── prod.env.js                     生产环境变量</span><br><span class="line"> │   └── test.env.js                     测试环境变量</span><br><span class="line"> ├── mock                            mock数据目录</span><br><span class="line"> │   └── hello.js</span><br><span class="line"> ├── package.json                    npm包配置文件，里面定义了项目的npm脚本，依赖包等信息</span><br><span class="line"> ├── src                             项目源码目录    </span><br><span class="line"> │   ├── main.js                         入口js文件</span><br><span class="line"> │   ├── App.vue                         根组件</span><br><span class="line"> │   ├── components                      公共组件目录</span><br><span class="line"> │   │   └── title.vue</span><br><span class="line"> │   ├── assets                          资源目录，这里的资源会被wabpack构建</span><br><span class="line"> │   │   ├── css                         公共样式文件目录</span><br><span class="line"> │   │   ├── js                          公共js文件目录</span><br><span class="line"> │   │   └── images                      图片存放目录</span><br><span class="line"> │   ├── api                             请求api</span><br><span class="line"> │   │   └── user.js</span><br><span class="line"> │   ├── store                           应用级数据（state, 在引用Vuex的时候会有该目录）</span><br><span class="line"> │   │   └── index.js</span><br><span class="line"> │   └── pages                           所有页面</span><br><span class="line"> │       └── home                        home页面</span><br><span class="line"> │            ├── components             home页面的组件</span><br><span class="line"> │            │       ├── header.vue</span><br><span class="line"> │            │       └── footer.vue</span><br><span class="line"> │            └home.vue                 </span><br><span class="line"> └── static                          纯静态资源，不会被wabpack构建。</span><br><span class="line"></span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<h3 id="vue文件基本结构"><a href="#vue文件基本结构" class="headerlink" title="vue文件基本结构"></a>vue文件基本结构</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;!--必须在div中编写页面--&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    components : &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    data () &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    mounted() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;!--声明语言，并且添加scoped--&gt;</span><br><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<h3 id="vue文件方法声明顺序"><a href="#vue文件方法声明顺序" class="headerlink" title="vue文件方法声明顺序"></a>vue文件方法声明顺序</h3><p>- components<br>- props<br>- data<br>- created<br>- mounted<br>- activited<br>- update<br>- beforeRouteUpdate<br>- metods<br>- filter<br>- computed<br>- watch</p>
+<h3 id="data-props-方法注意点："><a href="#data-props-方法注意点：" class="headerlink" title="data props 方法注意点："></a>data props 方法注意点：</h3><ul>
+<li>使用 data 里的变量时请先在 data 里面初始化</li>
+<li>props 指定类型，也就是 type</li>
+<li>props 改变父组件数据 基础类型用 $emit ，复杂类型直接改</li>
+<li>表单数据请包裹一层 form</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/14/结构化规范/" data-id="cjqvxrro10003ez2reclnndcw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-命名规范" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/14/命名规范/" class="article-date">
+  <time datetime="2019-01-14T06:16:13.000Z" itemprop="datePublished">2019-01-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/14/命名规范/">命名规范</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="组件命名"><a href="#组件命名" class="headerlink" title="组件命名"></a>组件命名</h2><ul>
+<li>组件名采用kebab-case (短横线分隔命名)</li>
+<li>全局组件用 base-名称， 局部组件用 页面-名称</li>
+<li>引入组件采用PascalCase (单词首字母大写命名)</li>
+</ul>
+<h2 id="method方法命名"><a href="#method方法命名" class="headerlink" title="method方法命名"></a>method方法命名</h2><ul>
+<li>动宾短语（good：jumpPage、openCarInfoDialog）（bad：go、nextPage、show、open、login）</li>
+<li>ajax 方法以 get、post 开头，以 data 结尾（good：getListData、postFormData）（bad：takeData、confirmData、getList、postForm）</li>
+<li>事件方法以 on 开头（onTypeChange、onUsernameInput）</li>
+<li>init、refresh 单词除外</li>
+<li>尽量使用常用单词开头（set、get、open、close、jump）</li>
+<li>驼峰命名（good: getListData）（bad: get_list_data、getlistData）</li>
+</ul>
+<h2 id="命名可遵循以下规则："><a href="#命名可遵循以下规则：" class="headerlink" title="命名可遵循以下规则："></a>命名可遵循以下规则：</h2><ul>
+<li>有意义的名词、简短、具有可读性</li>
+<li>以小写开头，采用短横线分割命名</li>
+<li>文件夹命名主要以功能模块代表命名</li>
+<li>同时还需要注意：必须符合自定义元素规范: 使用连字符分隔单词，切勿使用保留字。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/14/命名规范/" data-id="cjqvxrrnz0001ez2r0m8w2y2z" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-注释规范" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/14/注释规范/" class="article-date">
+  <time datetime="2019-01-14T06:15:46.000Z" itemprop="datePublished">2019-01-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/14/注释规范/">注释规范</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/14/注释规范/" data-id="cjqvxrro00002ez2rgqo8ukd2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-编码规范" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/14/编码规范/" class="article-date">
+  <time datetime="2019-01-14T03:18:54.000Z" itemprop="datePublished">2019-01-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/14/编码规范/">编码规范</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>优秀的项目源码，即使是多人开发，看代码也如出一人之手。统一的编码规范，可使代码更易于阅读，易于理解，易于维护。严格按照ESLint格式要求编写代码</p>
+<ul>
+<li>采用ES6的风格编码</li>
+<li>调试信息console.log() debugger 使用完及时删除</li>
+<li><p>prop 定义应该尽量详细，至少需要指定其类型</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正例</span></span><br><span class="line"></span><br><span class="line">props: &#123;</span><br><span class="line">  status: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    <span class="keyword">default</span>: <span class="string">'Hello World'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  obj: &#123;</span><br><span class="line">    type: <span class="built_in">Object</span>,</span><br><span class="line">    <span class="keyword">default</span> () &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 反例</span></span><br><span class="line"></span><br><span class="line">props: [<span class="string">'status'</span>, <span class="string">'obj'</span>]</span><br><span class="line">  </span><br></pre></td></tr></table></figure></li>
+<li><p>避免 v-if 和 v-for 用在一起</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 反例</span></span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=”active-users” v-<span class="keyword">for</span>=”user <span class="keyword">in</span> users” v-<span class="keyword">if</span>=”user.active”&gt;</span><br><span class="line"> &lt;h3&gt;&lt;/h3&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正例</span></span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=”active-users” v-<span class="keyword">for</span>=”user <span class="keyword">in</span> users”&gt;</span><br><span class="line">   &lt;div v-<span class="keyword">if</span>=”user.active”&gt;</span><br><span class="line">       &lt;h3&gt;&lt;/h3&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多个特性的元素 换行写</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正例</span></span><br><span class="line">&lt;img</span><br><span class="line">  src=<span class="string">"https://vuejs.org/images/logo.png"</span></span><br><span class="line">  alt=<span class="string">"Vue Logo"</span></span><br><span class="line">&gt;</span><br><span class="line">&lt;MyComponent</span><br><span class="line">  foo=<span class="string">"a"</span></span><br><span class="line">  bar=<span class="string">"b"</span></span><br><span class="line">  baz=<span class="string">"c"</span></span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 反例</span></span><br><span class="line">&lt;img src=<span class="string">"https://vuejs.org/images/logo.png"</span> alt=<span class="string">"Vue Logo"</span>&gt;</span><br><span class="line">&lt;MyComponent foo=<span class="string">"a"</span> bar=<span class="string">"b"</span> baz=<span class="string">"c"</span>/&gt;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/14/编码规范/" data-id="cjqvxsgua0005ez2rhu3yj51e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/02/hello-world/" class="article-date">
+  <time datetime="2019-01-02T07:15:32.750Z" itemprop="datePublished">2019-01-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/02/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/02/hello-world/" data-id="cjqvxrrob0004ez2rph3vomu1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/14/结构化规范/">结构化规范</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/14/命名规范/">命名规范</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/14/注释规范/">注释规范</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/14/编码规范/">编码规范</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/02/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 DuanFeng<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
